@@ -8,20 +8,22 @@ In this session we will explore the **asynchronous** and **parallel** programmin
 * 🐦**Twitter**: [@lmajano](https://twitter.com/lmajano)
 * 🔗**Site**: www.ortussolutions.com
 
-## Agenda
+## 📅 Agenda
 
 * [] Lessons from Callbacks
   * [] Also refered to as **Callback hell** :fire:
-  * [] Can make developers cry
-  * [] Never ending nesting
-  * [] Who has been there before?
+  * [] Can make developers cry :cry:
+  * [] Never ending nesting :spider:
+  * [] Who has been there before?  Don't lie!
 
 * [] Movement to promises
+  * [] JavaScript has made this very popular
   * [] To get some sanity back into to development
   * [] Can have different states:
-    * Resolve : when completed
-    * Reject : Error or something else
-    * Pending : Not executing
+    * `Resolve` : when completed
+    * `Reject` : Error or something else
+    * `Pending` : Not executing just yet
+  * [] Cancel them
   * [] Two channels of communication [Promises Track](samples\01-promises-track.md)
     * `Data`
     * `Error`
@@ -29,6 +31,11 @@ In this session we will explore the **asynchronous** and **parallel** programmin
 * [] What about ColdFusion?
   * [] `cfthread`, really?
     * [] This really makes developers cry :cry:
+    * [] Easy, but plagued with issues:
+      * [] No way to choose where it runs
+      * [] No concept of returning data, it's up to you
+      * [] Hard to manage them (cancel, monitor, pause)
+      * [] No functional approaches
   * [] Nothing existed until ACF2018/Lucee 5.3 => `runAsync()`
   * [] Many Issues:
     * [] Backed by a custom wrapper to `java.util.concurrent.Future`
@@ -39,12 +46,12 @@ In this session we will explore the **asynchronous** and **parallel** programmin
     * [] Only works with closures, does not work on actually calling component methods
 
 * [] What about Java?
-  * [] JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas.
-  * [] Java Promises, but you know Java devs, over complicate things, even names! 
-  * [] We have ported the majority of this functionality: `cbFutures`
+  * [] JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
+  * [] Java CompletableFutures are like JavaScript Promises, but you know Java devs, over complicate things, even names!
+  * [] We have ported the majority of this functionality to CFML: `cbFutures`
 
 * [] What is a ColdBox Future
-  * [] Similar to JS Promises but in CF backed by `CompletableFuture`
+  * [] Similar to JavaSscript Promises but in CF backed by `CompletableFuture`
   * [] Adapted for our dynamic language => many enhancements
   * [] `AsyncManager` class in charge of all async capabilities
     * [] Standalone: create an instance as a singleton
@@ -52,7 +59,7 @@ In this session we will explore the **asynchronous** and **parallel** programmin
     * [] Functions:
       * [] Create Futures
       * [] Create/Manage Executors and Schedule Tasks
-  * [] cbFutures Stages: [Stages Track](samples/02-java-stages.md)
+  * [] cbFutures Stages: [Stages Track](samples/02-cbfutures-stages.md)
   * [] [Create a future](samples/03-creating-future.cfc)
     * [] Where does it execute?
     * [] `ForkJoinPool`? What is it?
