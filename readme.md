@@ -1,17 +1,17 @@
-# ITB 2020 : To The Future With cbPromises
+# ITB 2020 : To The Future With `cbPromises` :rocket:
 
 > by Luis Majano - Ortus Solutions
 
-In this session we will explore the asynchronous and parallel programming constructs built into ColdBox 6. Java has supported a robust and functional approach to asynchronous programming since JDK8 and now it is available to us all in the Coldfusion (CFML) World! To the future!
+In this session we will explore the **asynchronous** and **parallel** programming constructs built into **ColdBox 6**. Java has supported a robust and functional approach to asynchronous programming since JDK8 and now it is available to us all in the Coldfusion (CFML) ⚡ World! To the future!
 
-* **Email**: lmajano@ortussolutions.com
-* **Twitter**: [@lmajano](https://twitter.com/lmajano)
-* **Site**: www.ortussolutions.com
+* 📧 **Email**: lmajano@ortussolutions.com
+* 🐦**Twitter**: [@lmajano](https://twitter.com/lmajano)
+* 🔗**Site**: www.ortussolutions.com
 
 ## Agenda
 
 * [] Lessons from Callbacks
-  * [] Also refered to as Callback hell
+  * [] Also refered to as **Callback hell** :fire:
   * [] Can make developers cry
   * [] Never ending nesting
   * [] Who has been there before?
