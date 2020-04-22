@@ -64,20 +64,19 @@ In this session we will explore the **asynchronous** and **parallel** programmin
     * [] Functions:
       * [] Create Futures
       * [] Create/Manage Executors and Schedule Tasks
-  * [] cbFutures Stages: [Stages Track](samples/02-cbfutures-stages.md)
+  * [] [cbFutures Stages](samples/02-cbfutures-stages.md)
   * [] [Create a future](samples/03-creating-future.cfc)
-    * [] Where does it execute?
-    * [] `ForkJoinPool`? What is it?
   * [] [Thread of execution](samples/04-nb-future.cfc)
   * [] [Changing the pool](samples/05-custom-pool.cfc)
-    * [] Most powerful features of async programming
     * [] Register many different [types of executors/pool](samples/06-cached-pool.cfc)
-      * [] Fixed : Control the amount of threads, cpu intensive, io intensive
-      * [] Single : A processing queue FIFO
-      * [] Cached : Ever expanding demand queue
-      * [] Scheduled : Scheduled Tasks
+      * [] `Fixed` : Control the amount of threads, cpu intensive, io intensive
+      * [] `Single` : A processing queue FIFO
+      * [] `Cached` : Ever expanding demand queue
+      * [] `Scheduled` : Scheduled Tasks
 
-* [] Magical Pipelining with `then()`!
-  * [] Java API: `thenSupply()` + `thenAccept()`
+* [] 🎩 Magical Pipelines: [`then()`!](samples/07-then.cfc)
+  * [] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
   * [] CF API: `then()` (Easier + Dynamic API)
     * [] Curiosity: CompletableFutures never end!  This is So Ironic! Sharknado! :shark:
+  * [Data Transformations](samples/08-data-transformations.cfc)
+  * [Dealing With Exceptions](samples/09-);
