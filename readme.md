@@ -10,6 +10,11 @@ In this session we will explore the **asynchronous** and **parallel** programmin
 
 ## 📅 Agenda
 
+* [] The NB (non-blocking) movement
+  * [] Has made NodeJS shine, but other languages support this as well.
+  * [] Movement to more async/parallel computations
+  * [] Overall movement to computations
+
 * [] Lessons from Callbacks
   * [] Also refered to as **Callback hell** :fire:
   * [] Can make developers cry :cry:
@@ -66,11 +71,11 @@ In this session we will explore the **asynchronous** and **parallel** programmin
   * [] [Thread of execution](samples/04-nb-future.cfc)
   * [] [Changing the pool](samples/05-custom-pool.cfc)
     * [] Most powerful features of async programming
-    * [] Register many different [~~types of executors/pools~~](samples/06-cached-pool.cfc)
-      * [] Fixed
-      * [] Single
-      * [] Cached
-      * [] Scheduled
+    * [] Register many different [types of executors/pool](samples/06-cached-pool.cfc)
+      * [] Fixed : Control the amount of threads, cpu intensive, io intensive
+      * [] Single : A processing queue FIFO
+      * [] Cached : Ever expanding demand queue
+      * [] Scheduled : Scheduled Tasks
 
 * [] Magical Pipelining with `then()`!
   * [] Java API: `thenSupply()` + `thenAccept()`
