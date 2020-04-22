@@ -49,22 +49,23 @@ In this session we will explore the asynchronous and parallel programming constr
   * [] `AsyncManager` class in charge of all async capabilities
     * [] Standalone: create an instance as a singleton
     * [] ColdBox: `async()` or `inject:AsyncManager@coldbox`
-    * [] Functions
+    * [] Functions:
       * [] Create Futures
       * [] Create/Manage Executors and Schedule Tasks
-  
-* [] cbFutures Stages: [Stages Track](samples/02-java-stages.md)
-* [] [Create a future](samples/03-creating-future.cfc)
-  * [] Where does it execute?
-  * [] `ForkJoinPool`? What is it?
-* [] [Thread of execution](samples/04-nb-future.cfc)
-* [] [Changing the pool](samples/05-custom-pool.cfc)
-  * [] Most powerful features of async programming
-  * [] Register many different [~~types of executors/pools~~](samples/06-cached-pool.cfc)
-    * [] Fixed
-    * [] Single
-    * [] Cached
-    * [] Scheduled
+  * [] cbFutures Stages: [Stages Track](samples/02-java-stages.md)
+  * [] [Create a future](samples/03-creating-future.cfc)
+    * [] Where does it execute?
+    * [] `ForkJoinPool`? What is it?
+  * [] [Thread of execution](samples/04-nb-future.cfc)
+  * [] [Changing the pool](samples/05-custom-pool.cfc)
+    * [] Most powerful features of async programming
+    * [] Register many different [~~types of executors/pools~~](samples/06-cached-pool.cfc)
+      * [] Fixed
+      * [] Single
+      * [] Cached
+      * [] Scheduled
 
 * [] Magical Pipelining with `then()`!
-  * [] Combines from java `thenSupply()` + `thenAccept()` => `then()` (Easier API)
+  * [] Java API: `thenSupply()` + `thenAccept()`
+  * [] CF API: `then()` (Easier + Dynamic API)
+    * [] Curiosity: CompletableFutures never end!  This is So Ironic! Sharknado! :shark:
