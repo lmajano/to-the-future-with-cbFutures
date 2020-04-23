@@ -86,7 +86,10 @@ In this session we will explore the **asynchronous** and **parallel** programmin
     * Exception on timeout
   * [Checking status](samples/11-statuschecks.cfc)
   * [Combining Futures](samples/12-combine.cfc)
+    * Very much like a `reduce()` operation
+    * Remember this: 1-1 operation
   * [Composing Futures](samples/13-compose.cfc)
+    * Hmm: 2-1 Operation, future of futures!
   
 * [] Working with multiple futures
   * [Racing Futures](samples/14-anyOf.cfc)
