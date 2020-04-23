@@ -2,19 +2,35 @@ component{
 
     async = new coldbox.system.async.AsyncManager();
 
-    function create( n ){
-        return async.newFuture( () => n );
+    function getFeedData( feed ){
+        print.greenLine( "Getting feed: #arguments.feed#" ).toConsole()
+        cffeed( action="read", source=feed, properties="local.properties", query="local.data" )
+        print.greenLine( "* Finished feed: #arguments.feed#" ).toConsole()
+        return {
+            "title" : local.properties.title,
+            "items" : local.data.reduce( ( result, row ) => {
+                result.append( row.title )
+                return result;
+            }, [] )
+        }
     }
 
     function run(){
+        
+        var feeds =  [
+            () => getFeedData( "http://feeds.feedburner.com/raymondcamdensblog" ),
+            () => getFeedData( "http://feeds.feedburner.com/ColdfusionbloggersorgFeed" ),
+            () => getFeedData( "https://feeds.transistor.fm/modernize-or-die-podcast-cfml-news-edition" )
+        ];
 
-		// If you do a computation that returns another future, instead of
-		// returning a future, compose them
-		create( 2 )
-			// If not, the result is a future and not the actual result
-			.thenCompose( (data) => create( data ) )
-			.thenRun( (result) => print.greenLine( result ) )
-
+        async
+            .all( feeds )
+            .get()
+            .each( ( feed ) => {
+                print.redLine( "Feed: #feed.title#" );
+                feed.items.each( ( item ) => print.blueLine( "  + #item#" ).toConsole() )
+            })
+        
     }
 
 }
