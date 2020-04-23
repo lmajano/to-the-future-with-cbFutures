@@ -95,3 +95,5 @@ In this session we will explore the **asynchronous** and **parallel** programmin
   * [Racing Futures](samples/14-anyOf.cfc)
   * [All Futures](samples/15-all.cfc)
   * [All futures Modified](samples/16-allapply.cfc)
+
+* [] Extra Credit: Schedule Tasks!
