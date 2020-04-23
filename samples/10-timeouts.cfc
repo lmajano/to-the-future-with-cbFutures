@@ -7,7 +7,7 @@ component{
 			.run( () => {
 				while( true ){
 					sleep( 500 );
-					print.greenLine( "waiting for infinity..." );
+					print.greenLine( "to infinity and beyond..." );
 				}
 				return -1;
 			})
