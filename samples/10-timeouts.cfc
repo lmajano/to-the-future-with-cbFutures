@@ -11,7 +11,7 @@ component{
 				}
 				return -1;
 			})
-			.completeOnTimeout( 50, 5, "seconds" )
+			//.completeOnTimeout( 50, 5, "seconds" )
 			//.orTimeout( 5, "seconds" )
 
 		print.blueLine( "Finished! #future.get()#" );

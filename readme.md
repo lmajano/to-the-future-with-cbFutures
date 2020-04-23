@@ -75,16 +75,20 @@ In this session we will explore the **asynchronous** and **parallel** programmin
       * [] `Cached` : Ever expanding demand queue
       * [] `Scheduled` : Scheduled Tasks
 
-* [] 🎩 Magical Pipelines: [`then()`!](samples/07-then.cfc)
+* [] 🎩 [Magical Pipelines](samples/07-then.cfc)
   * [] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
-  * [] CF API: `then()` (Easier + Dynamic API)
+  * [] CF API: `then()` and `thenRun()` (Easier + Dynamic API)
     * [] Curiosity: CompletableFutures never end!  This is So Ironic! Sharknado! :shark:
   * [Data Transformations](samples/08-data-transformations.cfc)
   * [Dealing with Exceptions](samples/09-exceptions.cfc)
-  * [Adding Timeouts](samples/10-timeouts.cfc)
+  * [Dealing with Timeouts](samples/10-timeouts.cfc)
     * Success on timeout
     * Exception on timeout
   * [Checking status](samples/11-statuschecks.cfc)
-* [Racing Futures](samples/12-anyOf.cfc)
-* [All Futures](samples/13-all.cfc)
-* [All futures Modified](samples/14-allapply.cfc)
+  * [Combining Futures](samples/12-combine.cfc)
+  * [Composing Futures](samples/13-compose.cfc)
+  
+* [] Working with multiple futures
+  * [Racing Futures](samples/14-anyOf.cfc)
+  * [All Futures](samples/15-all.cfc)
+  * [All futures Modified](samples/16-allapply.cfc)

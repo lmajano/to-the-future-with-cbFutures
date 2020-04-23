@@ -4,7 +4,7 @@ component {
     ioBound = async.newExecutor( name : "ioBound", type: "cached" );
 
 	function compute(){
-		print.blueLine( "Executing from: #getThreadname()#" )
+		print.greenLine( "Computing from: #getThreadname()#" )
 		return 2;
 	}
 
@@ -20,11 +20,11 @@ component {
 		create().then( (data) => {
 			// Where is this executing now?
 			print.redLine( "Executing from: #getThreadname()#" )
-			print.greenLine( data ) 
+			print.greenLine( data )
 		} )
 		// The Future Pipeline!
-		.then( (data) => print.greenLine( "All done" ) )
-		.then( () => print.greenLine( "not really" ) )
+		.then( (data) => print.greenLine( "All done: #data#" ) )
+		.thenRun( (data) => print.greenLine( "not really" ) )
 		.then( (data) => print.greenLine( "I never end!" ) );
 		// Where is it going? NOWHERE!!!
 

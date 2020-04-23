@@ -3,8 +3,8 @@ component {
 	async = new coldbox.system.async.AsyncManager();
 
 	function compute(){
-		sleep( 1000 );
-		print.blueLine( "Executing from: #getThreadname()#" )
+		//sleep( 1000 );
+		print.greenLine( "Computing from: #getThreadname()#" )
 		return 2;
 	}
 
@@ -16,11 +16,11 @@ component {
 
 		print.blueLine( "Starting from: #getThreadname()#" )
 		
-		create().then( (data) => {
+		create().thenRun( (data) => {
 			// Where is this executing? same thread?
 			// Think about it, we want a non-blocking mode.
 			print.redLine( "Executing from: #getThreadname()#" )
-			print.greenLine( data ) 
+			print.redLine( data ) 
 		} );
 
 		sleep( 2000 );
