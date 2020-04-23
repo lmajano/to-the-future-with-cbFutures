@@ -7,6 +7,7 @@ In this session we will explore the **asynchronous** and **parallel** programmin
 * 📧 **Email**: lmajano@ortussolutions.com
 * 🐦**Twitter**: [@lmajano](https://twitter.com/lmajano)
 * 🔗**Site**: www.ortussolutions.com
+* 🔗**Code**: https://github.com/lmajano/to-the-future-with-cbFutures
 
 ## 📅 Agenda
 
@@ -79,4 +80,11 @@ In this session we will explore the **asynchronous** and **parallel** programmin
   * [] CF API: `then()` (Easier + Dynamic API)
     * [] Curiosity: CompletableFutures never end!  This is So Ironic! Sharknado! :shark:
   * [Data Transformations](samples/08-data-transformations.cfc)
-  * [Dealing With Exceptions](samples/09-);
+  * [Dealing with Exceptions](samples/09-exceptions.cfc)
+  * [Adding Timeouts](samples/10-timeouts.cfc)
+    * Success on timeout
+    * Exception on timeout
+  * [Checking status](samples/11-statuschecks.cfc)
+* [Racing Futures](samples/12-anyOf.cfc)
+* [All Futures](samples/13-all.cfc)
+* [All futures Modified](samples/14-allapply.cfc)
