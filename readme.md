@@ -56,8 +56,8 @@ In this session we will explore the **asynchronous** and **parallel** programmin
   * [] Java CompletableFutures are like JavaScript Promises, but you know Java devs, over complicate things, even names!
   * [] We have ported the majority of this functionality to CFML: `cbFutures`
 
-* [] What is a ColdBox Future
-  * [] Similar to JavaSscript Promises but in CF backed by `CompletableFuture`
+* [] What is a ColdBox Future?
+  * [] Similar to JavaScript Promises but in CF backed by `CompletableFuture`
   * [] Adapted for our dynamic language => many enhancements
   * [] `AsyncManager` class in charge of all async capabilities
     * [] Standalone: create an instance as a singleton
