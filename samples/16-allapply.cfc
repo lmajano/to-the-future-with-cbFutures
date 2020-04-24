@@ -18,11 +18,13 @@ component{
 
     function run(){
         
-        // Produce mock array of objects
-        var data = async.arrayRange( 1, 200 ).map( (item) => getObject() );
+        // Build objects async
+        var aObjects = async
+            .allApply( async.arrayRange( 1, 200 ), (item) => getObject() )
+        
         // Process them
         async
-            .allApply( data, ( item ) => item.getMemento() )
+            .allApply( aObjects, ( item ) => item.getMemento() )
             //.allApply( data, ( item ) => item.getMemento(), async.$executors.newFixedThreadPool( 50 ) )
                 .each( (item) => print.blueLine( item.toString() ) );
 
