@@ -9,7 +9,6 @@
     },
     "scripts":{
         "run":"task run Run",
-        "watch":"task run build/Watch",
-        "sample:03":"task run samples/03-creating-future.cfc"
+        "watch":"task run build/Watch"
     }
 }
