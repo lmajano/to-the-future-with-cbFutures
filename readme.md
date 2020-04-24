@@ -5,9 +5,9 @@
 In this session we will explore the **asynchronous** and **parallel** programming constructs built into **ColdBox 6**. Java has supported a robust and functional approach to asynchronous programming since JDK8 and now it is available to us all in the Coldfusion (CFML) ⚡ World! To the future!
 
 * 📧 **Email**: lmajano@ortussolutions.com
-* 🐦**Twitter**: [@lmajano](https://twitter.com/lmajano)
-* 🔗**Site**: www.ortussolutions.com
-* 🔗**Code**: https://github.com/lmajano/to-the-future-with-cbFutures
+* 🐦 **Twitter**: [@lmajano](https://twitter.com/lmajano)
+* 🔗 **Site**: www.ortussolutions.com
+* 🔗 **Code**: https://github.com/lmajano/to-the-future-with-cbFutures
 
 ## 📅 Agenda
 
