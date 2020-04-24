@@ -30,7 +30,7 @@ In this session we will explore the **asynchronous** and **parallel** programmin
     * `Reject` : Error or something else
     * `Pending` : Not executing just yet
   * [] Cancel them
-  * [] Two channels of communication [Promises Track](samples\01-promises-track.md)
+  * [] Two channels of communication [Promises Track](samples/01-promises-track.md)
     * `Data`
     * `Error`
 
