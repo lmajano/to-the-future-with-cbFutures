@@ -3,6 +3,7 @@ component{
     async = new coldbox.system.async.AsyncManager();
 
     function getFeedData( feed ){
+        print.redLine( ">> Thread: #getThreadName()# ");
         print.greenLine( "Getting feed: #arguments.feed#" ).toConsole()
         cffeed( action="read", source=feed, properties="local.properties", query="local.data" )
         print.greenLine( "* Finished feed: #arguments.feed#" ).toConsole()
@@ -20,7 +21,9 @@ component{
         var feeds =  [
             () => getFeedData( "http://feeds.feedburner.com/raymondcamdensblog" ),
             () => getFeedData( "http://feeds.feedburner.com/ColdfusionbloggersorgFeed" ),
-            () => getFeedData( "https://feeds.transistor.fm/modernize-or-die-podcast-cfml-news-edition" )
+            () => getFeedData( "https://feeds.transistor.fm/modernize-or-die-podcast-cfml-news-edition" ),
+            () => getFeedData( "https://www.ortussolutions.com/blog/rss" ),
+            () => getFeedData( "http://feeds.bbci.co.uk/news/world/rss.xml" )
         ];
 
         async
