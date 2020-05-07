@@ -1,4 +1,4 @@
-# ITB 2020 : To The Future With `cbPromises` :rocket:
+# ITB 2020 : To The Future With `cbFutures` :rocket:
 
 > by Luis Majano - Ortus Solutions
 
