@@ -1,6 +1,6 @@
 component {
 
-    async = new coldbox.system.async.AsyncManager();
+    asyncManager = new coldbox.system.async.AsyncManager();
 
 	function compute(){
 		print.greenLine( "Computing from: #getThreadname()#" )
@@ -8,7 +8,7 @@ component {
 	}
 
 	function create(){
-		return async.newFuture( () => compute() )
+		return asyncManager.newFuture( () => compute() )
 	}
 
 	function run() {

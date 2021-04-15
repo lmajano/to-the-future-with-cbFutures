@@ -1,17 +1,17 @@
 component {
 
-    async = new coldbox.system.async.AsyncManager();
-    ioBound = async.newExecutor( name : "ioBound", type: "cached" );
+    asyncManager = new coldbox.system.async.AsyncManager();
+    ioBound = asyncManager.newExecutor( name : "ioBound", type: "cached" );
 
 	function compute(){
 		sleep( 1000 );
-		print.blueLine( "Executing from: #getThreadname()#" )
+		print.blueLine( "Computing from: #getThreadname()#" )
 		return 2;
 	}
 
 	function create(){
 		// Where is this executing now?
-		return async.newFuture( () => compute(), ioBound )
+		return asyncManager.newFuture( () => compute(), ioBound )
 	}
 
 	function run() {

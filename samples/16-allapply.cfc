@@ -1,6 +1,6 @@
 component{
 
-    async = new coldbox.system.async.AsyncManager();
+    asyncManager = new coldbox.system.async.AsyncManager();
     mock = new testbox.system.modules.mockdatacfc.models.MockData();
 
     function getObject(){
@@ -17,16 +17,18 @@ component{
     }
 
     function run(){
-        
+
         // Build objects async
-        var aObjects = async
-            .allApply( async.arrayRange( 1, 200 ), (item) => getObject() )
-        
+        var aObjects = asyncManager.allApply( 
+            [].append( asyncManager.arrayRange( "1..200" ), true ),
+            (item) => getObject()
+        );
+
         // Process them
-        async
+        asyncManager
             .allApply( aObjects, ( item ) => item.getMemento() )
-            //.allApply( data, ( item ) => item.getMemento(), async.$executors.newFixedThreadPool( 50 ) )
-                .each( (item) => print.blueLine( item.toString() ) );
+            //.allApply( data, ( item ) => item.getMemento(), asyncManager.$executors.newFixedThreadPool( 50 ) )
+            .each( (item) => print.blueLine( item.toString() ) );
 
 
         // 1. Now let's use a custom executor

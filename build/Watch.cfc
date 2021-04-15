@@ -10,8 +10,8 @@ component {
             .paths( "Run.cfc" )
             .withDelay( 500 )
             .onChange( () => {
-                command( 'echo Running...' ).run()
-                command( 'task run run' ).run() 
+                command( 'echo Running Task...' ).run()
+                command( 'task run run' ).run()
             } )
             .start();
 	}

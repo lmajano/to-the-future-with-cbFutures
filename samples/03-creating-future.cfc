@@ -1,6 +1,6 @@
 component {
 
-	async = new coldbox.system.async.AsyncManager();
+	asyncManager = new coldbox.system.async.AsyncManager();
 
 	function compute(){
 		//sleep( 3000 )
@@ -12,7 +12,7 @@ component {
 
 		print.blueLine( "Starting from: #getThreadname()#" )
 		
-		var future = async.newFuture( () => compute() )
+		var future = asyncManager.newFuture( () => compute() )
 			.then( (data) => {
 				// Where is this executing? same thread?
 				// Think about it, we want a non-blocking mode.

@@ -1,6 +1,6 @@
 component{
 
-    async = new coldbox.system.async.AsyncManager();
+    asyncManager = new coldbox.system.async.AsyncManager();
 
     function dns1(){
         sleep( randRange( 200, 700 ) );
@@ -31,7 +31,7 @@ component{
             () => getFeedData( "https://feeds.transistor.fm/modernize-or-die-podcast-cfml-news-edition" )
         ];
 
-        var future = async.anyOf( feeds ).then( (winner) => {
+        var future = asyncManager.anyOf( feeds ).then( (winner) => {
             print.blueLine( "The winner is: #winner.title#" )
             winner.items.each( (item) => print.redLine( " > #item#" ) )
         } );

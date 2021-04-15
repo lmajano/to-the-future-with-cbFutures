@@ -32,7 +32,7 @@
 		"body": [
 			"component{",
 			"",
-			"	async = new coldbox.system.async.AsyncManager();",
+			"	function async(){ return new coldbox.system.async.AsyncManager() }",
 			"",
 			"	function run(){",
 			"",

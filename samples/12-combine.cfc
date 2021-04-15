@@ -1,9 +1,9 @@
 component{
 
-    async = new coldbox.system.async.AsyncManager();
+    asyncManager = new coldbox.system.async.AsyncManager();
 
     function create( n ){
-        return async.newFuture( () => n );
+        return asyncManager.newFuture( () => n );
     }
 
     function run(){

@@ -1,9 +1,9 @@
 component{
 
-    async = new coldbox.system.async.AsyncManager();
+    asyncManager = new coldbox.system.async.AsyncManager();
 
     function run(){
-		var future = async.newFuture()
+		var future = asyncManager.newFuture()
 			.run( () => {
 				while( true ){
 					sleep( 500 );
@@ -11,8 +11,8 @@ component{
 				}
 				return -1;
 			})
-			//.completeOnTimeout( 50, 5, "seconds" )
 			//.orTimeout( 5, "seconds" )
+			//.completeOnTimeout( 50, 5, "seconds" )
 
 		print.blueLine( "Finished! #future.get()#" );
 

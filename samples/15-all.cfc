@@ -1,6 +1,6 @@
 component{
 
-    async = new coldbox.system.async.AsyncManager();
+    asyncManager = new coldbox.system.async.AsyncManager();
 
     function getFeedData( feed ){
         print.redLine( ">> Thread: #getThreadName()# ");
@@ -26,7 +26,7 @@ component{
             () => getFeedData( "http://feeds.bbci.co.uk/news/world/rss.xml" )
         ];
 
-        async
+        asyncManager
             .all( feeds )
             .get()
             .each( ( feed ) => {
