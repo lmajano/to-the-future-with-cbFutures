@@ -1,4 +1,4 @@
-# ITB 2020 : To The Future With `cbFutures` :rocket:
+# To The Future With `cbFutures` 🚀
 
 > by Luis Majano - Ortus Solutions
 
@@ -11,18 +11,18 @@ In this session we will explore the **asynchronous** and **parallel** programmin
 
 ## 📅 Agenda
 
-* [] The NB (non-blocking) movement
+* [√] The NB (non-blocking) movement
   * [] Has made NodeJS shine, but other languages support this as well.
   * [] Movement to more async/parallel computations
   * [] Overall movement to computations
 
-* [] Lessons from Callbacks
+* [√] Lessons from Callbacks
   * [] Also refered to as **Callback hell** 🔥
   * [] Can make developers cry 😢
   * [] Never ending nesting collection of closures/functions 🕷️
   * [] Who has been there before?  Don't lie! 🤥
 
-* [] Movement to **promises**
+* [√] Movement to **promises**
   * [] JavaScript has made this very popular
   * [] To get some sanity back into to development from call back hellfire 🔥
   * [] Can have 3 different states:
@@ -34,7 +34,7 @@ In this session we will explore the **asynchronous** and **parallel** programmin
     * `Data`
     * `Error`
 
-* [] What about ColdFusion?
+* [√] What about ColdFusion?
   * [] `cfthread`, right?? right? 🔨
     * [] Great for **very** basic threading
     * [] Easy, but plagued with issues, which makes developers ALSO cry :😢
@@ -54,27 +54,27 @@ In this session we will explore the **asynchronous** and **parallel** programmin
       * [] Only works with closures, does not work on actually calling component methods
   * [] 🤢 We have two approaches to threading which are extremely simplistic and not powerful at all.
 
-* [] What about Java?
+* [√] What about Java?
   * [] JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
   * [] 🦄 Java `CompletableFutures` are like JavaScript Promises, but you know Java devs, over complicate things, even names!
   * [] We have ported the majority of this functionality to CFML: `ColdBox Futures`
     * ColdBox, WireBox, CacheBox and LogBox
 
-* [] What is a ColdBox Future?
-  * [] Similar to JavaScript Promises but in CF backed by `CompletableFuture` Java API
-  * [] Adapted for our dynamic language => many enhancements
-  * [] `AsyncManager` class in charge of all async capabilities
+* [√] What is a ColdBox Future?
+  * [√] Similar to JavaScript Promises but in CF backed by `CompletableFuture` Java API
+  * [√] Adapted for our dynamic language => many enhancements
+  * [√] `AsyncManager` class in charge of all async capabilities
     * [] Standalone: create an instance as a singleton
     * [] ColdBox: `async()` or `inject:AsyncManager@coldbox`
     * [] Functions:
       * [] Create Futures
       * [] Create/Manage Executors
       * [] Create/Manage Schedule Tasks
-  * [] [cbFutures Stages](samples/02-cbfutures-stages.md)
-  * [] [Create a future](samples/03-creating-future.cfc)
-  * [] [Thread of execution](samples/04-nb-future.cfc)
-  * [] [Changing the pool](samples/05-custom-pool.cfc)
-    * [] Register many different [types of executors/pool](samples/06-cached-pool.cfc)
+  * [√] [cbFutures Stages](samples/02-cbfutures-stages.md)
+  * [√] [Create a future](samples/03-creating-future.cfc)
+  * [√] [Thread of execution](samples/04-nb-future.cfc)
+  * [√] [Changing the pool](samples/05-custom-pool.cfc)
+    * [√] Register many different [types of executors/pool](samples/06-cached-pool.cfc)
       * [] `Fixed` : Control the amount of threads, cpu intensive, io intensive
       * [] `Single` : A processing queue FIFO
       * [] `Cached` : Ever expanding demand queue
@@ -94,7 +94,7 @@ In this session we will explore the **asynchronous** and **parallel** programmin
     * Very much like a `reduce()` operation
     * Remember this: 1-1 operation
   * [Composing Futures](samples/13-compose.cfc)
-    * Monadic design pattern (https://medium.com/thg-tech-blog/monad-design-pattern-in-java-3391d4095b3f)
+    * Monadic design pattern (https://medium.com/thg-tech-blog/monad-design-**pattern**-in-java-3391d4095b3f)
     * Hmm: 2-1 Operation, future of futures!
   
 * [] Working with multiple futures
