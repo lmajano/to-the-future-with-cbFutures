@@ -94,8 +94,8 @@ In this session we will explore the **asynchronous** and **parallel** programmin
     * Very much like a `reduce()` operation
     * Remember this: 1-1 operation
   * [Composing Futures](samples/13-compose.cfc)
-    * Hmm: 2-1 Operation, future of futures!
     * Monadic design pattern (https://medium.com/thg-tech-blog/monad-design-pattern-in-java-3391d4095b3f)
+    * Hmm: 2-1 Operation, future of futures!
   
 * [] Working with multiple futures
   * [Racing Futures](samples/14-anyOf.cfc)
