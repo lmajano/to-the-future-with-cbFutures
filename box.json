@@ -1,7 +1,7 @@
 {
     "dependencies":{
-        "coldbox":"be",
-        "testbox":"^4"
+        "coldbox":"^6",
+        "testbox":"*"
     },
     "installPaths":{
         "coldbox":"coldbox/",
