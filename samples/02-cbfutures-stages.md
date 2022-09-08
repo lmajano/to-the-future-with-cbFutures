@@ -10,3 +10,8 @@ cb()           \           /
 * You can be zig-zagging into each track
 * Work with closures or CFC instance methods
 * Work with native CFML constructs
+* Stages
+  * Running
+  * Completed
+  * CompletedExceptionally
+  * Cancelled

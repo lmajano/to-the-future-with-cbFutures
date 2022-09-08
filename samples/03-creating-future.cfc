@@ -1,17 +1,16 @@
-component {
+component extends="../BaseTask" {
 
-	asyncManager = new coldbox.system.async.AsyncManager();
 
 	function compute(){
-		//sleep( 3000 )
-		print.greenLine( "Computing from: #getThreadname()#" )
+		sleep( 3000 )
+		print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
 		return 2;
 	}
 
 	function run() {
 
 		print.blueLine( "Starting from: #getThreadname()#" )
-		
+
 		var future = asyncManager.newFuture( () => compute() )
 			.then( (data) => {
 				// Where is this executing? same thread?
@@ -20,7 +19,7 @@ component {
 				print.greenLine( data )
 				//return data;
 			} );
-		
+
 		// Get the results and print: Remember, we are blocking here
 		//print.blueLine( "Future: " & future.get() );
 		//print.blueLine( "Future: " & future.get( timeout:1000 ) );
@@ -34,10 +33,6 @@ component {
 		// 5. But why a nasty exception, let use a default value now, woot woot!
 		// 6. There is alos a getNow() which is get whatever you have NOW!
 
-	}
-
-	function getThreadname(){
-		return createObject( "java", "java.lang.Thread" ).currentThread().getName();
 	}
 
 }

@@ -1,7 +1,10 @@
-component{
+component extends="../BaseTask" {
 
-    asyncManager = new coldbox.system.async.AsyncManager();
-    taskManager = asyncManager.newScheduledExecutor( name: "myTasks", threads: 20 );
+
+    function init(){
+        super.init()
+        taskManager = asyncManager.newScheduledExecutor( name: "myTasks", threads: 20 )
+    }
 
     function run(){
 
